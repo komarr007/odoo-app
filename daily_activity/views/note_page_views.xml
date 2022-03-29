@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="daily_note_view_tree" model="ir.ui.view">
+            <field name="name">daily.note.view.tree</field>
+            <field name="model">daily.note</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="note_date" />
+                    <field name="feeling_rate" />
+                    <field name="is_note_verified" />
+                    <field name="note_content" />
+                </tree>
+            </field>
+        </record>
+    
+        <record id="daily_note_view_form" model="ir.ui.view">
+            <field name="name">daily.note.view.form</field>
+            <field name="model">daily.note</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group name="" string="">
+                                <field name="note_date" />
+                            </group>
+                            <group>
+                                <field name="feeling_rate" />
+                                <field name="message_for_today"/>
+                            </group>
+                            <field name="note_content" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="daily_note_view_graph" model="ir.ui.view">
+            <field name="name">daily.note.view.graph</field>
+            <field name="model">daily.note</field>
+            <field name="arch" type="xml">
+                <graph string="Your Chart Tracker" type="bar">
+                    <field name="feeling_rate" />
+                </graph>
+            </field>
+        </record>
+
+        <record id="daily_note_action" model="ir.actions.act_window">
+            <field name="name">Daily Note</field>
+            <field name="res_model">daily.note</field>
+            <field name="view_mode">tree,form,graph</field>
+        </record>
+
+        <menuitem
+            id="daily_note_menu"
+            name="Daily Note"
+            parent="daily_activity_menu_tree"
+            action="daily_note_action"
+            sequence="10"/>
+
+    </data>
+    
+</odoo>

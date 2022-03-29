@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="daily_checker_view_tree" model="ir.ui.view">
+        <field name="name">daily.checker.view.tree</field>
+        <field name="model">daily.checker</field>
+        <field name="arch" type="xml">
+            <tree string="Note Verification">
+                <field name="checker_date" />
+                <field name="note_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="daily_checker_view_form" model="ir.ui.view">
+        <field name="name">daily.checker.view.form</field>
+        <field name="model">daily.checker</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group name="" string="Date and Activity">
+                            <field name="checker_date" />
+                        </group>
+                        <group string="Choose your Note">
+                            <field name="note_date" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="daily_checker_action" model="ir.actions.act_window">
+        <field name="name">Daily Checker</field>
+        <field name="res_model">daily.checker</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="daily_checker_menu"
+        name="Daily Checker"
+        parent="daily_activity_menu_tree"
+        action="daily_checker_action"
+        sequence="10"/>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="daily_activity_menu_root"
+        name="Daily activity"
+        sequence="10"/>
+
+    <menuitem
+        id="daily_activity_menu_tree"
+        name="Menu"
+        sequence="10"
+        parent="daily_activity_menu_root"/>
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_daily_note,access.daily.note,model_daily_note,,1,1,1,1
+access_daily_checker,access.daily.checker,model_daily_checker,,1,1,1,1
+access_yt_video_download,access.yt.video.download,model_yt_video_download,,1,1,1,1
