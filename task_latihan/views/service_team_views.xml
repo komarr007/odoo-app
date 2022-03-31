@@ -17,8 +17,8 @@
             <field name="name">booking.serviceteam.view.form</field>
             <field name="model">booking.serviceteam</field>
             <field name="arch" type="xml">
-                <field name="name" placeholder="Team Name"/>
                 <form>
+                    <field name="name" placeholder="Team Name"/>
                     <sheet>
                         <group>
                             <field name="team_leader_id" />
