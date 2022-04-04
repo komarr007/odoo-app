@@ -11,8 +11,9 @@ class WorkOrder(models.Model):
     team_member_ids = fields.Many2many('res.users', string="Service Members", default=False, required=True, readonly=False)
     planned_start = fields.Datetime(string="Planned Start", default=False, required=True, readonly=False)
     planned_end = fields.Datetime(string="Planned End", default=False, required=True, readonly=False)
-    date_start = fields.Datetime(string="Date Start", default=False, required=True, readonly=True)
-    date_end = fields.Datetime(string="Date End", default=False, required=False, readonly=True)
+    sale_order_id = fields.Many2one('sale.order', string="Booking Order Ref", default=False, required=True, readonly=False)
+    # date_start = fields.Datetime(string="Date Start", default=False, required=True, readonly=True)
+    # date_end = fields.Datetime(string="Date End", default=False, required=False, readonly=True)
     state = fields.Selection(
         [('pending', 'Pending'), ('in_progress', 'In_Progress'),
          ('done', 'Done'), ('cancel', 'Cancel')], string="Status", default='pending', readonly=True)
