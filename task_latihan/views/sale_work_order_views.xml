@@ -17,8 +17,7 @@
                         <group string="Date and Time">
                             <field name="planned_start" />
                             <field name="planned_end" />
-                            <!-- <field name="date_start" />
-                            <field name="date_end" /> -->
+                            <field name="due_date" />
                         </group>
                     </group>
                     <group>
@@ -40,8 +39,7 @@
                 <field name="team_leader_id" />
                 <field name="planned_start" />
                 <field name="planned_end" />
-                <!-- <field name="date_start" />
-                <field name="date_end" /> -->
+                <field name="due_date" />
                 <field name="state" />
             </tree>
         </field>
