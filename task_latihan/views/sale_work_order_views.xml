@@ -12,12 +12,13 @@
                             <field name="team_id" />
                             <field name="team_leader_id" />
                             <field name="team_member_ids" />
+                            <field name="sale_order_id" />
                         </group>
                         <group string="Date and Time">
                             <field name="planned_start" />
                             <field name="planned_end" />
-                            <field name="date_start" />
-                            <field name="date_end" />
+                            <!-- <field name="date_start" />
+                            <field name="date_end" /> -->
                         </group>
                     </group>
                     <group>
@@ -39,8 +40,8 @@
                 <field name="team_leader_id" />
                 <field name="planned_start" />
                 <field name="planned_end" />
-                <field name="date_start" />
-                <field name="date_end" />
+                <!-- <field name="date_start" />
+                <field name="date_end" /> -->
                 <field name="state" />
             </tree>
         </field>
