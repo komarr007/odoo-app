@@ -11,6 +11,7 @@ class DailyNote(models.Model):
     note_content = fields.Text(string="Note Content")
     is_note_verified = fields.Boolean(string="Verified", readonly=True)
     message_for_today = fields.Char(String="Message for Today", compute="_message_for_today")
+    upload_image = fields.Image(string="Upload an Image\nto Represented Your Day", max_width=1024, max_height=768)
 
     @api.onchange('note_content')
     def _note_id_generator(self):
