@@ -12,6 +12,7 @@
                     <field name="feeling_rate" />
                     <field name="is_note_verified" />
                     <field name="note_content" />
+                    <field name="upload_image" />
                 </tree>
             </field>
         </record>
@@ -25,6 +26,7 @@
                         <group>
                             <group name="" string="">
                                 <field name="note_date" />
+                                <field name="upload_image" widget="image"/>
                             </group>
                             <group>
                                 <field name="feeling_rate" />
